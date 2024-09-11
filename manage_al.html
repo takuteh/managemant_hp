@@ -3,15 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./test.css" />
+    <!--cssの読み込み-->
+    <link rel="stylesheet" href="./manage_al.css" />
+    <link rel="stylesheet" href="./button.css" />
     <title>Document</title>
   </head>
   <p>Home Gate Admin MENU</p>
   <header>
+    <!--ulは番号なしリスト-->
     <ul>
       <li><a href="#">TOP</a></li>
       <li><a href="#">仕様</a></li>
-      <li><a href="#">オートロック操作</a></li>
+      <li><a href="operate_al.html">オートロック操作</a></li>
       <li><a href="#">API管理</a></li>
       <li><a href="#">各種設定</a></li>
       <li><a href="#">問い合わせ</a></li>
@@ -19,38 +22,45 @@
   </header>
   <body>
     <button class="button" id="reboot">
-      再起動
-      <img
-        src="https://thumb.ac-illust.com/c6/c67bb5f5356abf4252f13f14c560aaf8_t.jpeg"
-      />
-    </button>
-
-    <button class="button" id="shutdown">
-      電源オフ
-      <img
-        src="https://png.pngtree.com/png-vector/20190120/ourmid/pngtree-shutdown-vector-icon-png-image_470710.jpg"
-      />
-    </button>
-    <button class="button">サービス再起動</button>
-    <script src="./test.js"></script>
-
-    <button class="button" id="reboot">
       LINE Official Account Manager
-      <img
+      <!-- <img
         src="https://thumb.ac-illust.com/c6/c67bb5f5356abf4252f13f14c560aaf8_t.jpeg"
-      />
+      /> -->
     </button>
 
     <button class="button" id="reboot">
       再起動
-      <img
+      <!-- <img
         src="https://thumb.ac-illust.com/c6/c67bb5f5356abf4252f13f14c560aaf8_t.jpeg"
-      />
+      /> -->
     </button>
 
     <div class="infomation">
       <h2>Infomation</h2>
-      2024/0903 オートロックをLINE対応化しました test
+      <ul class="news-list">
+        <li class="news-item">
+          <p class="news-date">2024/09/03</p>
+          <p class="news-category"><span>news</span></p>
+          <p class="news-main">オートロックをLINE対応化しました</p>
+        </li>
+        <li class="news-item">
+          <p class="news-date">2024/09/03</p>
+          <p class="news-category"><span>news</span></p>
+          <p class="news-main">オートロックをLINE対応化しました</p>
+        </li>
+        <li class="news-item">
+          <p class="news-date">2024/09/03</p>
+          <p class="news-category"><span>news</span></p>
+          <p class="news-main">オートロックをLINE対応化しました</p>
+        </li>
+        <li class="news-item">
+          <p class="news-date">2024/09/03</p>
+          <p class="news-category"><span>news</span></p>
+          <p class="news-main">オートロックをLINE対応化しました</p>
+        </li>
+      </ul>
     </div>
+    <!--jsの読み込み-->
+    <script src="./manage_al.js"></script>
   </body>
 </html>

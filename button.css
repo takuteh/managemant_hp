@@ -1,0 +1,22 @@
+/* <--ボタンの設定-- */
+.button {
+  padding: 15px 30px;
+  color: blue;
+  background-color: yellow;
+  font-size: 20px;
+  border-radius: 50px; /*ボタンの角を丸める*/
+  cursor: pointer; /*ボタンにカーソルが乗ったらポインターにする*/
+}
+
+/*カーソル合わせた時の動き*/
+.button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05); /*少し拡大する*/
+}
+
+/*クリックしたときの動き*/
+.button:active {
+  background-color: #004085;
+  transform: scale(0.98); /*少し縮小する*/
+}
+/* --ボタンの設定--> */

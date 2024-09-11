@@ -1,22 +1,35 @@
-p {
-  color: #ffa500;
-  font-weight: bold;
-  font-size: 30px;
-  line-height: 1.8;
-}
-
+/* <--ヘッダー部の設定-- */
 header {
   z-index: 10;
   height: 64px;
   background-color: #333;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25); /*影をつける*/
   margin-bottom: 20px;
 }
 
-a {
-  color: #fff;
-  text-transform: uppercase;
+header ul {
+  overflow: hidden; /*リストの境界を越えたら表示しない*/
+  list-style: none; /*リストの「●」を表示しない*/
+  margin: 0 auto; /*外側の余白*/
+  
 }
+header ul li {
+  display: inline-block; /*リストを横並びにする*/
+  padding: 26px 10px 20px 10px; 内側の余白
+}
+
+header ul li a {
+  color: #fff;
+  text-transform: uppercase; /*テキストを全て大文字にする*/
+  text-decoration: none; /*デフォルトの下線を削除*/
+}
+
+header ul li a:hover {
+  color: red;
+  font-size: 18px;
+  transform: scale(1.05); /*少し拡大する*/
+}
+/* --ヘッダー部の設定--> */
 
 body {
   /*height:100vh;*/
@@ -24,59 +37,80 @@ body {
   /*background-size:cover;*/
   /*background-position:center;*/
 }
-ul {
-  overflow: hidden;
-  list-style: none;
-  margin: 0 auto;
-}
-ul li {
-  display: inline-block;
-  padding: 26px 10px 20px 10px;
-}
 
-.head {
-  background-color: blue;
-}
-
-.button {
-  padding: 15px 30px;
-  color: blue;
-  background-color: yellow;
-  font-size: 20px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.button:hover {
-  /*カーソル合わせた時の動き*/
-  background-color: #0056b3;
-  transform: scale(1.05);
-}
-.button:active {
-  /*クリックしたときの動き*/
-  background-color: #004085;
-  transform: scale(0.98);
-}
-
-#reboot img {
-  height: 30px;
-}
-
-#shutdown img {
-  height: 30px;
-}
-
+/* <--お知らせ欄の設定-- */
 .infomation {
-  background-color: darkgray;
+  background-color: #fff;
   padding: 20px;
   position: fixed;
   bottom: 20px; /*下にスペースを作る*/
   width: 80%;
-  height: 20%;
+  height: 300px;
   margin: 0 auto;
-  overflow: auto; /*スクロールバー*/
+  text-align: center; /*テキストを中央揃え*/
 }
 
 .infomation h2 {
   background-color: white;
 }
+
+.news-list {
+  list-style: none outside; /*リストの「●」を非表示　outsideでもし表示するようにしても外側に表示*/
+  margin: 0;
+  padding: 10px;
+  height: 200px;
+  overflow: auto; /*スクロールバー*/
+}
+/* 各リスト項目のスタイル */
+.news-list .news-item {
+  display: flex; /*フレックスコンテナを作成*/
+  flex-wrap: wrap; /*幅を超えた場合複数行で表示*/
+  padding: 20px 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* 日付のスタイル */
+.news-list .news-item .news-date {
+  margin: 5px;
+  min-width: 140px; /*最小幅*/
+  font-size: 16px;
+  color: #999;
+  padding: 0 20px 0 0;
+}
+
+/* カテゴリーのスタイル */
+.news-list .news-item .news-category {
+  margin: 0;
+  min-width: 140px;
+  padding: 0 20px 0 0;
+}
+
+.news-list .news-item .news-category span {
+  background: #999;
+  color: #fff;
+  text-align: center; /*テキストを中央揃え*/
+  display: inline-block; /*リスト横並び*/
+  padding: 5px 20px;
+  font-size: 12px;
+  line-height: 1;
+}
+
+/* ニューステキストのスタイル */
+.news-list .news-item .news-main {
+  margin: 0;
+  width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  /* .news-list .item a{
+    flex-wrap: wrap;
+  } */
+  .news-list .news-item .news-date {
+    min-width: 100px;
+  }
+  .news-list .news-item .news-main {
+    margin-top: 10px;
+  }
+}
+
+/* --お知らせ欄の設定--> */
