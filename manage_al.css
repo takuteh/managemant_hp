@@ -1,36 +1,3 @@
-/* <--ヘッダー部の設定-- */
-header {
-  z-index: 10;
-  height: 64px;
-  background-color: #333;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25); /*影をつける*/
-  margin-bottom: 20px;
-}
-
-header ul {
-  overflow: hidden; /*リストの境界を越えたら表示しない*/
-  list-style: none; /*リストの「●」を表示しない*/
-  margin: 0 auto; /*外側の余白*/
-  
-}
-header ul li {
-  display: inline-block; /*リストを横並びにする*/
-  padding: 26px 10px 20px 10px; 内側の余白
-}
-
-header ul li a {
-  color: #fff;
-  text-transform: uppercase; /*テキストを全て大文字にする*/
-  text-decoration: none; /*デフォルトの下線を削除*/
-}
-
-header ul li a:hover {
-  color: red;
-  font-size: 18px;
-  transform: scale(1.05); /*少し拡大する*/
-}
-/* --ヘッダー部の設定--> */
-
 body {
   /*height:100vh;*/
   background-color: #e0ffff;
