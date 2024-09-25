@@ -1,6 +1,12 @@
+#title {
+  background-color: white;
+  font-size: 30px;
+}
+
 body {
   /*height:100vh;*/
   background-color: #e0ffff;
+  padding-top: 180px; /* 180px下から開始 */
   /*background-size:cover;*/
   /*background-position:center;*/
 }
